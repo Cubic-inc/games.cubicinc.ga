@@ -5,6 +5,17 @@ local Static = require("weblit-static")
 App.use(require('weblit-auto-headers'))
 App.use(require('weblit-etag-cache'))
 
+App.bind({
+    host = "127.0.0.1",
+    port = 8080
+})
+
+  
+App.bind({
+    host = "127.0.0.1",
+    port = 8443
+})
+
 
 App.route({method = "GET", path = "/games/:path:"}, Static(pathJoin(module.dir, "games")))
 
