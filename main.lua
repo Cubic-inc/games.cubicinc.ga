@@ -6,13 +6,13 @@ App.use(require('weblit-auto-headers'))
 App.use(require('weblit-etag-cache'))
 
 App.bind({
-    host = "127.0.0.1",
+    host = "0.0.0.0",
     port = 8080
 })
 
   
 App.bind({
-    host = "127.0.0.1",
+    host = "0.0.0.0",
     port = 8443
 })
 
