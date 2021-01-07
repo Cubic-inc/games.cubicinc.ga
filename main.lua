@@ -8,4 +8,9 @@ App.use(require('weblit-etag-cache'))
 
 App.route({method = "GET", path = "/games/:path:"}, Static(pathJoin(module.dir, "games")))
 
+App.route({method = "GET", path = "/"}, function (req, res, go)
+    res.code = 200
+    res.body = "This page is under construction"
+end)
+
 App.start()
